@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Hesap Makinesi</h2>
+<br/>
+
+<form class="form-group" method="post">
+    
+        <div>
+            sayi 1: <input type="text" name="sayi1" id="sayi1" /></br>
+                    <div style="margin-top:10px">
+                        sayi 2: <input type="text" name="sayi2" id="sayi2" /></br>
+
+                        <div style="margin-top:10px"></div>
+                        <button class="btn btn-warning">HESAPLA</button>
+                        Toplam: @ViewBag.toplam
+                        </div>
+                    </div>
+    </div>
+
+
+</form>
+
