@@ -14,6 +14,7 @@
         <th>OgrenciFotograf</th>
         <th>OgrenciCinsiyet</th>
         <th>OgrenciKülüp</th>
+        <th>İşlemler</th>
     </tr>
     <tbody>
         @foreach (var item in Model)
@@ -25,6 +26,8 @@
                 <td>@item.OGRFOTOGRAF</td>
                 <td>@item.OGRCINSIYET</td>
                 <td>@item.OGRKULUP</td>
+                <td><a href="/Student/Delete/@item.OGRENCIID" class="btn btn-danger">Sil</a>
+                <a href="/Student/update/@item.OGRENCIID" class="btn btn-success">Güncelle</a></td>
 
             </tr>
         }

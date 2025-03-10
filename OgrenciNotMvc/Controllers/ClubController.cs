@@ -27,5 +27,18 @@ namespace OgrenciNotMvc.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult Delete(int id)
+        {
+            var club = db.TBLKULUPLER.Find(id);
+            db.TBLKULUPLER.Remove(club);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        public ActionResult GetClub(int id)
+        {
+            var club = db.TBLKULUPLER.Find(id);
+            return View("GetClub", club);
+        }
+
     }
 }

@@ -1,0 +1,16 @@
+﻿@model OgrenciNotMvc.Models.EntityFramework.TBLKULUPLER
+@{
+    ViewBag.Title = "GetClub";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Update", "Club", FormMethod.Post))
+{
+   
+    <div class="form-group">
+        @Html.LabelFor(x => x.KULUPAD)
+        @Html.TextBoxFor(x => x.KULUPAD, new { @class = "form-control" })
+    </div>
+    @Html.HiddenFor(x => x.KULUPID)
+    <button type="submit" class="btn btn-primary">Güncelle</button>
+}

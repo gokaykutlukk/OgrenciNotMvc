@@ -30,8 +30,13 @@ namespace OgrenciNotMvc.Controllers
             db.TBLDERSLER.Add(p);
             db.SaveChanges();
             return RedirectToAction("Index");
-
-
+        }
+        public ActionResult Delete(int id)
+        {
+            var ders = db.TBLDERSLER.Find(id);
+            db.TBLDERSLER.Remove(ders);
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

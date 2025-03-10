@@ -9,13 +9,16 @@
     <tr>
         <th>Kulüp Id</th>
         <th>Kulüp Adı</th>
+        <th>İŞLEMLER</th>
     </tr>
     <tbody>
         @foreach(var item in Model)
             {
                 <tr>
-                    <th>@item.KULUPID</th>
-                    <th>@item.KULUPAD</th>
+                    <td>@item.KULUPID</td>
+                    <td>@item.KULUPAD</td>
+                    <td><a href="/Club/Delete/@item.KULUPID" class="btn btn-danger">Sil</a>
+                    <a href="/Club/GetClub/@item.KULUPID" class="btn btn-success">Güncelleme</a></td>
                 </tr>
             }
     </tbody>

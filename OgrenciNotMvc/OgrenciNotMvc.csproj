@@ -600,6 +600,7 @@
     <Content Include="Views\Student\NewStudent.cshtml" />
     <Content Include="Views\Not\NewNote.cshtml" />
     <Content Include="Views\Calucator\Index.cshtml" />
+    <Content Include="Views\Club\GetClub.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

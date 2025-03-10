@@ -37,5 +37,12 @@ namespace OgrenciNotMvc.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult Delete(int id)
+        {
+            var student = db.TBLOGRENCILER.Find(id);
+            db.TBLOGRENCILER.Remove(student);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

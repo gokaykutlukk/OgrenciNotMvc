@@ -9,6 +9,7 @@
     <tr>
         <th>Ders Id</th>
         <th>Ders Adı</th>
+        <th>İŞLEMLER</th>
     </tr>
     <tbody>
         @foreach (var item in Model)
@@ -16,6 +17,8 @@
             <tr>
                 <td>@item.DERSID</td>
                 <td>@item.DERSAD</td>
+                <td><a href="/Default/Delete/@item.DERSID" class="btn btn-danger">Sil</a>
+                <a href="/Default/Update/@item.DERSID" class="btn btn-success">Güncelle</a></td>
             </tr>
         }
     </tbody>
