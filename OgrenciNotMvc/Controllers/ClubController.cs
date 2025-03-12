@@ -39,6 +39,13 @@ namespace OgrenciNotMvc.Controllers
             var club = db.TBLKULUPLER.Find(id);
             return View("GetClub", club);
         }
+        public ActionResult Update(TBLKULUPLER club)
+        {
+            var clb = db.TBLKULUPLER.Find(club.KULUPID);
+            clb.KULUPAD = club.KULUPAD;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
 
     }
 }

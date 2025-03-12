@@ -136,6 +136,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Class1.cs" />
     <Compile Include="Models\EntityFramework\Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -601,6 +602,9 @@
     <Content Include="Views\Not\NewNote.cshtml" />
     <Content Include="Views\Calucator\Index.cshtml" />
     <Content Include="Views\Club\GetClub.cshtml" />
+    <Content Include="Views\Default\GetDers.cshtml" />
+    <Content Include="Views\Student\GetStudent.cshtml" />
+    <Content Include="Views\Not\GetNote.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

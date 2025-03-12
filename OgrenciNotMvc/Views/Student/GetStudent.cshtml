@@ -1,0 +1,34 @@
+﻿@model OgrenciNotMvc.Models.EntityFramework.TBLOGRENCILER
+@{
+    ViewBag.Title = "GetStudent";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Update", "Student", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(x => x.OGRAD)
+        @Html.TextBoxFor(x => x.OGRAD, new { @class = "form-control" })
+
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.OGRSOYAD)
+        @Html.TextBoxFor(x => x.OGRSOYAD, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.OGRFOTOGRAF)
+        @Html.TextBoxFor(x => x.OGRFOTOGRAF, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.HiddenFor(x => x.OGRCINSIYET)
+        @Html.TextBoxFor(x => x.OGRCINSIYET, new { @class = "form-control" })
+    </div>
+    @Html.HiddenFor(x => x.OGRENCIID)
+<div style="margin-top:15px">
+    <button type="submit" class="btn btn-primary">Güncelle</button>
+</div>
+
+
+}

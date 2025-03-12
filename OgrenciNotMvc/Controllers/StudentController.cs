@@ -44,5 +44,21 @@ namespace OgrenciNotMvc.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult GetStudent(int id)
+        {
+            var student = db.TBLOGRENCILER.Find(id);
+            return View("GetStudent", student);
+        }
+        public ActionResult Update(TBLOGRENCILER student)
+        {
+            var std = db.TBLOGRENCILER.Find(student.OGRENCIID);
+            std.OGRAD = student.OGRAD;
+            std.OGRSOYAD = student.OGRSOYAD;
+            std.OGRFOTOGRAF = student.OGRFOTOGRAF;
+            std.OGRCINSIYET = student.OGRCINSIYET;
+            std.OGRKULUP = student.OGRKULUP;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
