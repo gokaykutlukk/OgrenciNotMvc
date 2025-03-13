@@ -53,7 +53,16 @@ namespace OgrenciNotMvc.Controllers
 
             if (model.islem == "Not Güncelle")
             {
-                
+                var note = db.TBLNOTLAR.Find(p.NOTID);
+                note.SINAV1 = p.SINAV1;
+                note.SINAV2 = p.SINAV2;
+                note.SINAV3 = p.SINAV3;
+                note.PROJE = p.PROJE;
+                note.ORTALAMA = p.ORTALAMA;
+                note.DURUM = p.DURUM;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+
             }
             db.SaveChanges();
             return RedirectToAction("Index");

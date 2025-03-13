@@ -28,7 +28,7 @@
     </div>
     <div class="form-group">
         @Html.HiddenFor(x => x.ORTALAMA)
-        @Html.TextBoxFor(x => x.ORTALAMA, new { @class = "form-control" })
+        @Html.TextBoxFor(x => x.ORTALAMA, new {@Value=ViewBag.ort ,@class = "form-control" })
     </div>
     <div class="form-group">
         @Html.HiddenFor(x => x.DURUM)
@@ -39,7 +39,9 @@
     <button type="submit" name="islem" value="Hesapla" class="btn btn-default">Ortalama Hesapla</button>
     <br />
     <button type="submit" name="islem" value="Not Güncelle" class="btn btn-success">Güncelle</button>
+    
 </div>
+
 
 
 }
