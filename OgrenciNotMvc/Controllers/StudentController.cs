@@ -47,6 +47,13 @@ namespace OgrenciNotMvc.Controllers
         public ActionResult GetStudent(int id)
         {
             var student = db.TBLOGRENCILER.Find(id);
+            List<SelectListItem> degerler = (from i in db.TBLKULUPLER.ToList()
+                                             select new SelectListItem
+                                             {
+                                                 Text = i.KULUPAD,
+                                                 Value = i.KULUPID.ToString()
+                                             }).ToList();
+            ViewBag.dgr = degerler;
             return View("GetStudent", student);
         }
         public ActionResult Update(TBLOGRENCILER student)
